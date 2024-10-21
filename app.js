@@ -17,16 +17,16 @@
 
 let jokes = [
     {
-        joke1: "joke 1"
+        joke: "joke 1"
     },
     {
-        joke2: "joke 2"
+        joke: "joke 2"
     },
     {
-        joke3: "joke 3"
+        joke: "joke 3"
     },
     {
-        joke4: "joke 4"
+        joke: "joke 4"
     }
 ]
 let index = 0
@@ -34,15 +34,14 @@ let index = 0
 
 function showJokes(){
     let jokeDiv = document.getElementById("joke");
-    for(let key of jokes){
+    // for(let key of jokes){
         console.log(key)
-        jokeDiv.innerHtml=jokes[index].jokes
-    }
+        jokeDiv.innerHTML=jokes[index].joke
+    // }
 
 showJokes()
 
 }
-showJokes()
 let nextBtn = document.getElementById("btn")
 nextBtn.addEventListener('click',()=>{
     index=(index+1)%jokes.length
