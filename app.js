@@ -14,6 +14,7 @@
 //     }
 //   }
 //   abc();
+
 let jokes = [
     {
         joke1: "joke 1"
@@ -35,17 +36,18 @@ function showJokes(){
     let jokeDiv = document.getElementById("joke");
     for(let key of jokes){
         console.log(key)
-        jokeDiv.innerHTML=jokes[index]
+        jokeDiv.innerHtml=jokes[index].jokes
     }
-    // jokes.forEach((joke,()=>{
-    //     let oneByOne = jokes[index]
-    //     jokeDiv.innerHTML=oneByOne
-    // }))
+
+showJokes()
+
 }
 showJokes()
 let nextBtn = document.getElementById("btn")
-nextBtn.addEventListener('click',showJokes)
-
+nextBtn.addEventListener('click',()=>{
+    index=(index+1)%jokes.length
+    showJokes()
+})
 // async function abc() {
 //     let index=0
 //     try {
@@ -68,4 +70,28 @@ nextBtn.addEventListener('click',showJokes)
 // let btn = document.getElementById('btn')
 // btn.addEventListener("click", abc)
 
+
+
+
+// let jokes = [
+//     { joke: "joke 1" },
+//     { joke: "joke 2" },
+//     { joke: "joke 3" },
+//     { joke: "joke 4" }
+// ];
+
+// let index = 0;
+
+// function showJokes() {
+//     let jokeDiv = document.getElementById("joke");
+//     jokeDiv.innerHTML = jokes[index].joke; // Display the joke at the current index
+// }
+
+// showJokes(); // Show the first joke initially
+
+// let nextBtn = document.getElementById("btn");
+// nextBtn.addEventListener('click', () => {
+//     index = (index + 1) % jokes.length; // Increment index and wrap around if it exceeds array length
+//     showJokes(); // Display the next joke
+// });
 
