@@ -33,7 +33,6 @@ let index = 0
 
 function showJokes(){
     let jokeDiv = document.getElementById("joke");
-    // console.log(oneByOne)
     for(let key of jokes){
         console.log(key)
         jokeDiv.innerHTML=jokes[index]
